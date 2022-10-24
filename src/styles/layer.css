@@ -1,0 +1,126 @@
+.search-div{
+    background-color: white;
+    border: 1px solid #dddd;
+    border-radius: 40px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+    transition: box-shadow 0.2s ease;
+    display: inline-flex;
+    padding: 10px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-div:hover{
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+    transition: box-shadow 0.2s ease;
+}
+
+.add{
+    width: 100px;
+    text-align: center;
+    border-right: 1px solid rgb(189, 184, 184);
+    height: 24px;
+}
+.last-index{
+    width: 100px;
+    text-align: center;
+    height: 24px;
+}
+.main-profile{
+    display: flex;
+}
+.host-text{
+    white-space: nowrap;
+    font-weight: 900;
+    font-size: 17px;
+}
+
+.host-container{
+    width: 170px;
+    height: 40px;
+    padding: 28px 4px;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
+.host-container:hover{
+    background-color: rgba(238, 234, 234, 0.745); 
+    width: 170px;
+    height: 40px;
+    border-radius: 26px;
+    padding: 28px 4px;
+    cursor: pointer;
+}
+.globe{
+    border: '1px solid #ddd';
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.globe:hover{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(238, 234, 234, 0.745); 
+    border-radius: 50%;
+}
+.user-circle{
+    border: 1px solid #ddd;
+    border-radius: 38px;
+    cursor: pointer;
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.user-circle:hover{
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+    transition: box-shadow 0.2s ease;
+}
+.tab{
+    border-bottom: 1px solid;
+}
+.scroll-cirlce{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.CardsCarosel .MuiMobileStepper-root {
+    opacity: 0;
+    transition: all ease 1000ms;
+  }
+
+  .CardsCarosel:hover .MuiMobileStepper-root {
+    opacity:1
+  }
+
+  .CardsCarosel:hover .MuiMobileStepper-dotActive {
+    background-color: #fff
+  }
+
+.map{
+    height: 45px;
+    width: 140px;
+    border-radius: 38px;
+    background: black;
+    z-index: 900;
+    position: fixed;
+    bottom: 100px;
+    left: 45%;
+    padding: 20px;
+    cursor: pointer;
+}
+.map:hover{
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}
+.map-text{
+    color: white;
+    white-space: nowrap;
+    font-weight: 700;
+}
+.map-icon{
+    font-size: 27px;
+}
