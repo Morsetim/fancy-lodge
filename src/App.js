@@ -55,7 +55,7 @@ function App() {
        }}
          className='map'
          >
-          <p className='map-text'>Show mappp</p>
+          <p className='map-text'>Show map</p>
           <span className='map-icon'>
           <MapIcon />
           </span>
