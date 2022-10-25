@@ -55,12 +55,11 @@ function App() {
        }}
          className='map'
          >
-          <p className='map-text'>Show map</p>
+          <p className='map-text'>Show mappp</p>
           <span className='map-icon'>
           <MapIcon />
           </span>
         </Box>
-        <Map />
         <Box sx={displayOnDesktop}>
           <Footer />
         </Box>

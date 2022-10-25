@@ -1,15 +1,8 @@
 import React from 'react';
 import "styles/layer.css";
 
-import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
-import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
 // react icons
 import { IoSearchCircleSharp } from 'react-icons/io5';
-import { pink } from '@mui/material/colors';
 
 const options = [
   { id: 1, text: 'Anywhere' },
