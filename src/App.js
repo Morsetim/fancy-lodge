@@ -9,7 +9,6 @@ import './App.css';
 import { displayOnDesktop } from 'themes/commonStyles';
 import {ReactComponent as MapIcon} from 'assets/map-icon.svg'
 import Footer from 'components/Footer';
-import Map from 'components/Map';
 
 
 function App() {
