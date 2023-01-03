@@ -111,16 +111,24 @@
     left: 45%;
     padding: 20px;
     cursor: pointer;
+
 }
 .map:hover{
     transform: scale(1.1);
     transition: .2s ease-in-out;
+    cursor: pointer;
 }
 .map-text{
     color: white;
     white-space: nowrap;
     font-weight: 700;
+    cursor: pointer;
 }
 .map-icon{
     font-size: 27px;
+}
+.g-map{
+    width: 100%;
+    height: 75vh;
+    border: 2px solid;
 }

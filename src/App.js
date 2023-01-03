@@ -4,19 +4,52 @@ import { Box } from '@mui/system';
 import Header from 'components/Header';
 import TownsCard from 'components/townsCard';
 import VarietiesTab from 'components/varietiesTab';
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { displayOnDesktop } from 'themes/commonStyles';
 import {ReactComponent as MapIcon} from 'assets/map-icon.svg'
 import Footer from 'components/Footer';
-import Map from 'components/Map';
+import { towns } from 'data/mock-data';
+import {
+  useJsApiLoader,
+  GoogleMap,
+  Marker,
+  InfoWindow,
+  
+} from '@react-google-maps/api';
 
+const nigeria = {lat:6.5244, lng:3.3792}
 
 function App() {
+  const [mapview, setMapView] = useState(true);
+  const [activeMarker, setActiveMarker] = useState(null);
+
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: process.env.REACT_APP_FARM_SMARTER_MAP_API_KEY,
+    libraries: ['places'],
+});
+
+  const showMap = () => {
+    setMapView(!mapview)
+  }
+
+  if (!isLoaded) {
+    return (
+        <div>Loading....</div>
+    )
+}
+
+const handleActiveMarker = (marker) => {
+  if (marker === activeMarker) {
+      return;
+  }
+  setActiveMarker(marker);
+};
+
   return (
     <React.Fragment>
       <CssBaseline />
-      <Box
+      {mapview && <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -51,11 +84,12 @@ function App() {
         sx={{ 
           display: 'flex',
           justifyContent: 'space-around',
-          alignItems: 'center'
+          alignItems: 'center',
+          cursor: 'pointer'
        }}
          className='map'
          >
-          <p className='map-text'>Show map</p>
+          <p className='map-text' onClick={showMap}>Show map</p>
           <span className='map-icon'>
           <MapIcon />
           </span>
@@ -64,6 +98,38 @@ function App() {
           <Footer />
         </Box>
       </Box>
+      }
+       {!mapview && <div className='g-map'>
+       <GoogleMap
+          center={nigeria}
+          // ref={containerRef}
+          zoom={12}
+          mapContainerStyle={{ width: '100%', height: '100%', overflow: 'auto' }}
+          options={{
+              zoomControl: false,
+              mapTypeControl: false,
+              fullscreenControl: false,
+              // gestureHandling: "greedy",
+          }}
+      >
+          {towns.map(({id, cord, location }) => (
+              <Marker
+                  key={id}
+                  position={cord}
+                  // options={{
+                  //     icon: CustomMarker
+                  // }}
+                  onClick={() => handleActiveMarker(id)}
+              >
+                  {activeMarker === id ? (
+                      <InfoWindow onCloseClick={() => setActiveMarker(null)}>
+                          <div>{location}</div>
+                      </InfoWindow>
+                  ) : null}
+              </Marker>
+          ))}
+        </GoogleMap>
+        </div>}
     </React.Fragment>
   );
 }

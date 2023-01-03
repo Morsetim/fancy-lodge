@@ -70,6 +70,7 @@ export const towns = [
     price: '₦14,999',
     isNew: true,
     rating: 3.0,
+    cord: {lat:7.1475, lng:3.3619}
   },
   {
     id: 2,
@@ -96,6 +97,7 @@ export const towns = [
     price: '₦3000',
     isNew: false,
     rating: 4.99,
+    cord: {lat:6.5040, lng:3.3771}
   },
   {
     id: 3,
@@ -122,6 +124,7 @@ export const towns = [
     price: '₦1,129',
     isNew: true,
     rating: 4.6,
+    cord: {lat:7.5614, lng:6.2429}
   },
   {
     id: 4,
@@ -148,6 +151,7 @@ export const towns = [
     price: '₦208',
     isNew: false,
     rating: 4.2,
+    cord: {lat:7.2146, lng:5.1641}
   },
   {
     id: 5,
@@ -174,6 +178,7 @@ export const towns = [
     price: '₦243',
     isNew: true,
     rating: 4.1,
+    cord: {lat:7.2571, lng:5.2058}
   },
   {
     id: 6,
@@ -200,6 +205,7 @@ export const towns = [
     price: '₦698',
     isNew: false,
     rating: 4.6,
+    cord: {lat:6.5244, lng:3.3792}
   },
   {
     id: 7,
@@ -226,6 +232,7 @@ export const towns = [
     price: '₦467',
     isNew: true,
     rating: 4.7,
+    cord: {lat:7.3775, lng:3.9470}
   },
   {
     id: 8,
@@ -252,6 +259,7 @@ export const towns = [
     price: '₦1,767',
     isNew: false,
     rating: 4.8,
+    cord: {lat:6.4302, lng:3.4502}
   },
   {
     id: 9,
@@ -278,6 +286,7 @@ export const towns = [
     price: '₦910',
     isNew: true,
     rating: 4.3,
+    cord: {lat:6.6018, lng:3.3515}
   },
   {
     id: 10,
@@ -304,6 +313,7 @@ export const towns = [
     price: '₦629',
     isNew: false,
     rating: 4.6,
+    cord: {lat:6.4926, lng:3.3490}
   },
   {
     id: 11,
@@ -330,6 +340,7 @@ export const towns = [
     price: '₦2,595',
     isNew: false,
     rating: 4.1,
+    cord: {lat:6.6194, lng:3.5105}
   },
   {
     id: 12,
@@ -356,6 +367,7 @@ export const towns = [
     price: '₦4,467',
     isNew: false,
     rating: 4.2,
+    cord: {lat:6.5355, lng:3.3087}
   },
   {
     id: 13,
@@ -382,6 +394,7 @@ export const towns = [
     price: '₦358',
     isNew: true,
     rating: 4.5,
+    cord: {lat:6.5352, lng:3.3490}
   },
   {
     id: 14,
@@ -408,6 +421,7 @@ export const towns = [
     price: '₦777',
     isNew: true,
     rating: 4.8,
+    cord: {lat:6.5631, lng:3.2506}
   },
   {
     id: 15,
@@ -434,6 +448,7 @@ export const towns = [
     price: '₦2,999',
     isNew: true,
     rating: 4.88,
+    cord: {lat:6.5790, lng:3.3495}
   },
   {
     id: 16,
@@ -460,6 +475,7 @@ export const towns = [
     price: '₦500',
     isNew: false,
     rating: 4.2,
+    cord: {lat:6.4926, lng:3.3490}
   },
   {
     id: 17,
@@ -486,6 +502,7 @@ export const towns = [
     price: '₦3,369',
     isNew: false,
     rating: 4.1,
+    cord: {lat:6.4281, lng:3.4219}
   },
   {
     id: 18,
@@ -512,6 +529,7 @@ export const towns = [
     price: '₦2511',
     isNew: true,
     rating: 4.5,
+    cord: {lat:9.0765, lng:7.3986}
   },
   {
     id: 19,
@@ -538,6 +556,7 @@ export const towns = [
     price: '₦3200',
     isNew: true,
     rating: 4.7,
+    cord: {lat:5.5720, lng:7.0588}
   },
   {
     id: 20,
@@ -564,5 +583,7 @@ export const towns = [
     price: '₦14,999',
     isNew: false,
     rating: 4.5,
+    cord: {lat:6.4646, lng:3.5725}
+
   },
 ];
