@@ -15,7 +15,6 @@ import {
   GoogleMap,
   Marker,
   InfoWindow,
-  
 } from '@react-google-maps/api';
 
 const nigeria = {lat:6.5244, lng:3.3792}
@@ -23,6 +22,7 @@ const nigeria = {lat:6.5244, lng:3.3792}
 function App() {
   const [mapview, setMapView] = useState(true);
   const [activeMarker, setActiveMarker] = useState(null);
+  const [step, setStep] = useState(1);
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_FARM_SMARTER_MAP_API_KEY,
@@ -31,12 +31,18 @@ function App() {
 
   const showMap = () => {
     setMapView(!mapview)
+    setStep(2)
   }
 
   if (!isLoaded) {
     return (
         <div>Loading....</div>
     )
+}
+
+const goBack = () => {
+  setStep(1)
+  setMapView(true)
 }
 
 const handleActiveMarker = (marker) => {
@@ -49,7 +55,7 @@ const handleActiveMarker = (marker) => {
   return (
     <React.Fragment>
       <CssBaseline />
-      {mapview && <Box
+      {mapview && step === 1 && <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -99,12 +105,12 @@ const handleActiveMarker = (marker) => {
         </Box>
       </Box>
       }
-       {!mapview && <div className='g-map'>
+       {!mapview && step === 2 && <div className='g-map'>
        <GoogleMap
           center={nigeria}
           // ref={containerRef}
           zoom={12}
-          mapContainerStyle={{ width: '100%', height: '100%', overflow: 'auto' }}
+          mapContainerStyle={{ width: '100%', height: '90%', overflow: 'auto' }}
           options={{
               zoomControl: false,
               mapTypeControl: false,
@@ -129,7 +135,9 @@ const handleActiveMarker = (marker) => {
               </Marker>
           ))}
         </GoogleMap>
-        </div>}
+        <p className='back' onClick={goBack}>&#8592; Back to homes</p>
+        </div>
+        }
     </React.Fragment>
   );
 }
